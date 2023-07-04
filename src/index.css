@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============= sign up sectio =================== */
 .sign-up {
   background-color: rgb(21, 21, 96);
   color: rgb(126, 118, 118);
@@ -11,15 +12,14 @@
   padding: 2rem auto;
   text-align: center;
   border-radius: 20px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   letter-spacing: 2px;
 }
-.sign-up h2{
- text-transform: uppercase;
- margin-top: 2rem;
- padding-top: 2rem;
- font-size: 2rem;
-
+.sign-up h2 {
+  text-transform: uppercase;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  font-size: 2rem;
 }
 .sign-up-link {
   padding: 0.5rem;
@@ -27,7 +27,24 @@
   border-radius: 10px;
   cursor: pointer;
 }
-.sign-up-link:hover{
- background-color: rgb(240, 212, 178);
- color: rgb(77, 72, 72);
+.sign-up-link:hover {
+  background-color: rgb(240, 212, 178);
+  color: rgb(77, 72, 72);
+}
+.btn {
+  text-transform: uppercase;
+
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 2px solid rgb(79, 71, 71);
+  width: 7rem;
+  transition: 0.1s ease;
+}
+
+.btn:hover {
+  background-color: rgb(171, 188, 146);
+  color: rgb(29, 7, 87);
+  font-weight: 900;
 }
