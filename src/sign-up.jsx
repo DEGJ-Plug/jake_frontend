@@ -36,7 +36,6 @@ export default function sign_up() {
                 id=""
               />
             </div>
-            <button type="submit" className="btn"> submit </button>
           </form>
         </div>
       </article>

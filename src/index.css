@@ -3,32 +3,32 @@
 @tailwind utilities;
 
 /* ============= navbar section =================== */
-.navbar{
- display: flex;
- flex-direction: row;
- justify-content: space-between;
- align-items: center;
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.search{
- border: 1px solid transparent;
- border-top-left-radius: 10px;
- border-bottom-left-radius: 10px;
+.search {
+  border: 1px solid transparent;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 .search:hover {
   background-color: rgb(240, 212, 178);
   color: rgb(77, 72, 72);
 }
-.logo h3{
- text-transform: uppercase;
- font-family: 'Courier New', Courier, monospace;
- color: burlywood;
+.logo h3 {
+  text-transform: uppercase;
+  font-family: "Courier New", Courier, monospace;
+  color: burlywood;
 }
-.logo h3 span{
- background-color: burlywood;
- color: rgb(65, 50, 30);
- font-weight: bolder;
- margin-left: 1rem;
+.logo h3 span {
+  background-color: burlywood;
+  color: rgb(65, 50, 30);
+  font-weight: bolder;
+  margin-left: 1rem;
 }
 /* ============= sign up section =================== */
 .sign-up {
@@ -55,6 +55,7 @@
   border-radius: 10px;
   cursor: pointer;
 }
+
 .sign-up-link:hover {
   background-color: rgb(240, 212, 178);
   color: rgb(77, 72, 72);
@@ -74,6 +75,10 @@
   background-color: rgb(171, 188, 146);
   color: rgb(29, 7, 87);
   font-weight: 900;
+}
+.sign-up-link:hover {
+  background-color: rgb(240, 212, 178);
+  color: rgb(77, 72, 72);
 }
 
 /* ============= user section =================== */
