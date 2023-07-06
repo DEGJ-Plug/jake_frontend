@@ -1,4 +1,5 @@
 import "./index.css";
+import { FaYoutube } from "react-icons/fa";
 
 function App() {
   return (
@@ -37,7 +38,7 @@ function App() {
             id=""
           />
           <button
-            type="submit"
+            type="search"
             className="px-1 py-2 rounded bg-cyan-500 hover:bg-cyan-600"
           >
             search
