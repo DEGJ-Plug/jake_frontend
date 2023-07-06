@@ -17,11 +17,7 @@ const SearchProduct = () => {
         </div>
       </div>
       <div>
-        <img
-          className="hidden m-4 sm:m-auto"
-          src={headphone_pic}
-          alt="headphone img"
-        />
+        <img className="m-4" src={headphone_pic} alt="headphone img" />
       </div>
     </section>
   );

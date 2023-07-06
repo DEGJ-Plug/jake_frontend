@@ -47,7 +47,7 @@ const Header = () => {
       </div>
       <div className="font-normal text-lg">
         <button className="bg-blue-600 p-4 text-white rounded-md hover:bg-blue-700 shadow-md shadow-gray-600">
-          <Link>Try JaKe</Link>
+          <Link to="/register">Try JaKe</Link>
         </button>
       </div>
     </header>
