@@ -9,7 +9,7 @@ const SearchProduct = () => {
         </h1>
         <div className="flex items-center bg-white rounded-lg md:px-2 px-1">
           <input
-            className="w-full py-2 text-xl outline-none"
+            className="w-full  py-2 text-xl outline-none "
             type="search"
             placeholder="Search for your favorite products"
           />
