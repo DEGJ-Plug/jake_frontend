@@ -2,12 +2,12 @@ import { FcSearch } from "react-icons/fc";
 import headphone_pic from "../assets/headphone_pic.jpg";
 const SearchProduct = () => {
   return (
-    <section className="bg-blue-600 flex items-center justify-between mx-16 my-16 rounded-lg">
-      <div className="ml-20 w-3/6">
-        <h1 className="text-white font-bold text-2xl mb-6">
+    <section className="bg-blue-600 flex md:flex-row items-center md:justify-between md:mx-20 mx-1 my-1 md:my-14 rounded-lg flex-col">
+      <div className="md:ml-20 md:w-3/6 ml-4 w-5/6">
+        <h1 className="text-white font-bold md:text-2xl mb-6 text-lg">
           Get the best product at <br /> your home
         </h1>
-        <div className="flex items-center bg-white py-3 rounded-xl px-2">
+        <div className="flex items-center bg-white rounded-lg md:px-2 px-1">
           <input
             className="w-full py-2 text-xl outline-none"
             type="search"
@@ -17,7 +17,7 @@ const SearchProduct = () => {
         </div>
       </div>
       <div>
-        <img className="m-4" src={headphone_pic} alt="headphone img" />
+        <img className="md:m-4 m-2" src={headphone_pic} alt="headphone img" />
       </div>
     </section>
   );
