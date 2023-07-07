@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import SearchProduct from "../components/SearchProduct";
 import Categories from "../components/categories";
+import Product from "../components/product";
 
 const Home = () => {
   return (
@@ -8,6 +9,8 @@ const Home = () => {
       <Header />
       <SearchProduct />
       <Categories />
+      <Product />
+      
     </div>
   );
 };
