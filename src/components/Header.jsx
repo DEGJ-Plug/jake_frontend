@@ -17,7 +17,9 @@ const Header = () => {
       </div>
       <div className="font-normal flex justify-betweem text-xl">
         <ul className="flex transition-all">
-          <FaHome className="md:hidden mx-4 hover:text-blue-600 hover:scale-125" />
+          <NavLink to="/products" className={({ isActive }) => isActive}>
+            <FaHome className="md:hidden mx-4 hover:text-blue-600 hover:scale-125" />
+          </NavLink>
           <li className="mx-3 hidden md:flex hover:text-blue-600 hover:scale-125 transition-all">
             <NavLink
               to="/"
@@ -27,7 +29,9 @@ const Header = () => {
             </NavLink>
           </li>
           <ul className="flex transition-all">
-            <MdOutlineProductionQuantityLimits className="md:hidden mx-4 hover:text-blue-600 hover:scale-125" />
+            <NavLink to="/products" className={({ isActive }) => isActive}>
+              <MdOutlineProductionQuantityLimits className="md:hidden mx-4 hover:text-blue-600 hover:scale-125" />
+            </NavLink>
             <li className=" mx-3 hidden md:flex hover:text-blue-600 hover:scale-125 transition-all">
               <NavLink
                 to="/products"
@@ -38,7 +42,9 @@ const Header = () => {
             </li>
           </ul>
           <ul className="flex transition-all">
-            <MdOutlineMiscellaneousServices className="md:hidden mx-4 hover:text-blue-600 hover:scale-125" />
+            <NavLink to="/products" className={({ isActive }) => isActive}>
+              <MdOutlineMiscellaneousServices className="md:hidden mx-4 hover:text-blue-600 hover:scale-125" />
+            </NavLink>
             <li className="mx-3 hidden md:flex hover:text-blue-600 hover:scale-125 transition-all">
               <NavLink
                 to="/services"
@@ -48,8 +54,11 @@ const Header = () => {
               </NavLink>
             </li>
           </ul>
+
           <ul className="flex transition-all">
-            <RiCustomerService2Fill className="md:hidden mx-4 hover:text-blue-600 hover:scale-125" />
+            <NavLink to="/products" className={({ isActive }) => isActive}>
+              <RiCustomerService2Fill className="md:hidden mx-4 hover:text-blue-600 hover:scale-125" />
+            </NavLink>
             <li className="mx-3 hidden md:flex hover:text-blue-600 hover:scale-125 transition-all">
               <NavLink
                 to="/FAQ"
