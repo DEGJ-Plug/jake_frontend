@@ -1,69 +1,40 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-import Alert from "./Alert";
+import { toast } from "react-toastify";
 
 const RegisterForm = () => {
-  const [userName, setUserName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [registrationStatus, setRegistrationStatus] = useState(null);
+  const [credentials, setCredentials] = useState({
+    userName: "",
+    email: "",
+    password: "",
+  });
 
-  const handleUserNameChange = (e) => {
-    e.preventDefault();
-    setUserName(e.target.value);
+  const handleChange = (e) => {
+    setCredentials({
+      ...credentials,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  const handleEmailChange = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setEmail(e.target.value);
-  };
+    try {
+      const response = await axios.post(
+        "http://localhost:8090/auth/register",
+        credentials
+      );
 
-  const handlePasswordChange = (e) => {
-    e.preventDefault();
-    setPassword(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    axios
-      .post("http://localhost:8090/auth/register", {
-        userName,
-        email,
-        password,
-      })
-      .then((response) =>
-        setRegistrationStatus({
-          message: response.data.message,
-          type: "success",
-        })
-      )
-      .catch((err) => {
-        setRegistrationStatus({
-          message: err.message,
-          type: "error",
-        });
-        console.log(err);
-      });
-
-    //   try {
-    //     response = await axios.post("http://localhost:8090/auth/register", {
-    //       userName,
-    //       email,
-    //       password,
-    //     });
-
-    //     setRegistrationStatus({
-    //       message: response.data.message,
-    //       type: "success",
-    //     });
-    //   } catch (error) {
-    //     setRegistrationStatus({
-    //       message: error.message,
-    //       type: "error",
-    //     })
-    //   }
+      if (response.status === 201) {
+        toast.success(response.data.message);
+      } else if (response.status === 400) {
+        toast.error(response.data.error);
+      } else {
+        toast.error(response.data.error);
+      }
+    } catch (error) {
+      toast.error(error.message);
+    }
   };
 
   return (
@@ -73,57 +44,54 @@ const RegisterForm = () => {
           REGISTER
         </h1>
       </div>
-      {registrationStatus && (
-        <Alert
-          message={registrationStatus.message}
-          type={registrationStatus.type}
-        />
-      )}
       <form onSubmit={handleSubmit}>
         <div className="mb-5">
           <div>
-            <label>Username</label>
+            <label htmlFor="userName">Username</label>
           </div>
           <div>
             <input
               type="text"
               placeholder="Enter your Username"
               className="border w-full outline-none py-1"
-              value={userName}
-              onChange={handleUserNameChange}
+              name="userName"
+              value={credentials.userName}
+              onChange={handleChange}
             />
           </div>
         </div>
         <div className="mb-5">
           <div>
-            <label>Email</label>
+            <label htmlFor="email">Email</label>
           </div>
           <div>
             <input
               type="email"
               placeholder="Enter your Email address"
               className="border w-full outline-none py-1"
-              value={email}
-              onChange={handleEmailChange}
+              name="email"
+              value={credentials.email}
+              onChange={handleChange}
             />
           </div>
         </div>
         <div className="mb-5">
           <div>
-            <label>Password</label>
+            <label htmlFor="password">Password</label>
           </div>
           <div>
             <input
               type="password"
               placeholder="Enter your password"
               className="border w-full outline-none py-1"
-              value={password}
-              onChange={handlePasswordChange}
+              name="password"
+              value={credentials.password}
+              onChange={handleChange}
             />
           </div>
         </div>
         <button
-          onClick={handleSubmit}
+          type="submit"
           className="w-full border border-gray-200 shadow-sm bg-blue-500 py-3 text-white rounded-sm hover:bg-blue-700 mb-5"
         >
           REGISTER
