@@ -1,8 +1,8 @@
-const Footer = () => {
+const footer = () => {
   return (
     <section>
-      <div>
-        <div>
+      <div className="bg-gray-500 text-gray-100"> 
+        <div className=" flex ">
           <div>
             <h4>NEED HELP?</h4>
             <article>
@@ -29,4 +29,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default footer;
