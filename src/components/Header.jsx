@@ -10,7 +10,7 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <header className="flex md:flex-row flex-col md:justify-between md:items-center md:mx-12 mx-4 my-3 sticky top-0">
+    <header className=" flex md:flex-row flex-col md:justify-between md:items-center md:mx-12 mx-4 my-3 ">
       <div className="flex justify-between items-center">
         <div className="text-4xl font-bold cursor-pointer">
           <Link to="/">

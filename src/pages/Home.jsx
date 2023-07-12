@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import SearchProduct from "../components/SearchProduct";
 import Categories from "../components/categories";
 import Product from "../components/product";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -10,7 +11,7 @@ const Home = () => {
       <SearchProduct />
       <Categories />
       <Product />
-      
+      <Footer />
     </div>
   );
 };
