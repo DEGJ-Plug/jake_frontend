@@ -4,7 +4,7 @@ const SearchProduct = () => {
   return (
     <section className="bg-blue-600 flex md:flex-row items-center md:justify-between md:mx-20 mx-1 my-1 md:my-10 rounded-lg flex-col">
       <div className="md:ml-20 md:w-3/6 ml-4 w-5/6">
-        <h1 className="text-white font-bold md:text-2xl mb-6 text-lg md:mt-0 mt-6">
+        <h1 className="text-white font-bold md:text-2xl mb-6 text-lg md:mt-0 mt-6.">
           Get the best product at <br /> your home
         </h1>
         <div className="flex items-center bg-white rounded-lg md:px-2 px-1">
