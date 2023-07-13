@@ -2,20 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --transition: all 0.4s linear;
-  --radius: 0.5rem;
-  --spacing: 0.25rem;
-}
-/* ============= product section =================== */
-
-.product-card {
-  transition: var(--transition);
-  margin-right: 2rem;
-  margin-top: 2rem;
-}
-
-.product-card:hover {
-  transform: scale(1.05);
-}
-
