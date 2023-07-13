@@ -11,27 +11,27 @@ const Accordion = () => {
     },
     {
       id: "2",
-      label: "As a seller, how do I find buyers",
+      label: "As a seller, how do I find buyers?",
       content:
         "Once you're a registered seller on Jake platform, You don't have to find buyers as the products you upload will be shown to buyers on the platform and you'll be contacted by the buyer if he or she wants your product",
     },
     {
       id: "3",
-      label: "How do I pay for the services or products I'm interested in",
+      label: "How do I pay for the services or products I'm interested in?",
       content:
         "You have to come to an agreement with the seller on the means of payment, jake'll always advice you get to see the product you purchased first before making payment",
     },
     {
       id: "4",
       label:
-        "How do I know the sellers and logistics personnel are not scammers",
+        "How do I know the sellers and logistics personnel are not scammers?",
       content:
         "Jake has already veted any registered sellers and logistics services before showcasing them to you that is the reason upon your interest on a particular product you'll be able to contact the seller and also view the seller's details such as business address, telephone number etc for you to make your own verification until you're comfortable",
     },
     {
       id: "5",
       label:
-        "Do I need to purchase a product before having access to engage the services of logistics personnel",
+        "Do I need to purchase a product before having access to engage the services of logistics personnel?",
       content:
         "No you don't have to necessarily purchase a product before you can engage the services of logistics personnel, if you need the services of a logistics personnel then feel free to engage them on jake platform",
     },
