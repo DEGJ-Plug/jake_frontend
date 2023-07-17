@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -9,6 +9,8 @@ const RegisterForm = () => {
     email: "",
     password: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setCredentials({
@@ -19,6 +21,7 @@ const RegisterForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     try {
       const response = await axios.post(
         "http://localhost:8090/auth/register",
@@ -26,6 +29,7 @@ const RegisterForm = () => {
       );
 
       if (response.status === 201) {
+        navigate("/login");
         toast.success(response.data.message);
       } else if (response.status === 400) {
         toast.error(response.data.error);
@@ -34,6 +38,8 @@ const RegisterForm = () => {
       }
     } catch (error) {
       toast.error(error.message);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -94,7 +100,7 @@ const RegisterForm = () => {
           type="submit"
           className="w-full border border-gray-200 shadow-sm bg-blue-500 py-3 text-white rounded-sm hover:bg-blue-700 mb-5"
         >
-          REGISTER
+          {isLoading ? "LOADING..." : "REGISTER"}
         </button>
         <h3 className=" text-center">
           Already have an account?
